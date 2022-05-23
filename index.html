@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forecast</title>
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="heading">
+        <p class="image">🌞</p>
+        <p class="temp-degree">21</p>
+        <div class="degrees">
+          <p class="celsius degree"><a class="celsiusD" href="#">°C</a></p>
+          <span class="slice">|</span>
+          <p class="fahrenheight degree">
+            <a class="fahrenheightD" href="#">°F</a>
+          </p>
+        </div>
+
+        <div class="main-data">
+          <h1 class="current_city">Lviv, Ukraine</h1>
+          <p class="current-time">Thursday, 14:30</p>
+        </div>
+      </section>
+      <section class="choose_city">
+        <div class="temp-data">
+          <p>Precipitation: 0%</p>
+          <p>Humidity: 77%</p>
+          <p>Wind: 8 km/h</p>
+        </div>
+        <form class="search">
+          <input
+            type="text"
+            class="input-el"
+            value=""
+            placeholder="Enter a city"
+          />
+          <button type="button" class="btn btn-outline-primary">Search</button>
+          <button type="button" class="btn-current">Current</button>
+        </form>
+      </section>
+      <section class="weather">
+        <hr />
+        <div class="weekdays">
+          <div class="daygroup sunday">
+            <h5>Sun</h5>
+            <p class="emoji">🌞</p>
+            <p class="degrees">18/4</p>
+          </div>
+          <div class="daygroup monday">
+            <h5>Mon</h5>
+            <p class="emoji">⛈</p>
+            <p class="degrees">13/2</p>
+          </div>
+          <div class="daygroup tuesday">
+            <h5>Tue</h5>
+            <p class="emoji">🌤</p>
+            <p class="degrees">16/3</p>
+          </div>
+          <div class="daygroup wednesday">
+            <h5>Wed</h5>
+            <p class="emoji">🌧</p>
+            <p class="degrees">7/-3</p>
+          </div>
+          <div class="daygroup thursday">
+            <h5>Thur</h5>
+            <p class="emoji">☁</p>
+            <p class="degrees">11/5</p>
+          </div>
+          <div class="daygroup friday">
+            <h5>Fri</h5>
+            <p class="emoji">🌞</p>
+            <p class="degrees">20/10</p>
+          </div>
+          <div class="daygroup saturday">
+            <h5>Sat</h5>
+            <p class="emoji">🌞</p>
+            <p class="degrees">25/13</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

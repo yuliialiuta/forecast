@@ -1,0 +1,154 @@
+body {
+  margin: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 3px solid #519df4;
+}
+
+.heading {
+  padding: 10px 10px 0;
+  display: inline-flex;
+  max-height: 100px;
+}
+
+.heading > .image {
+  padding: 15px 5px;
+  font-size: 40px;
+  margin: 0;
+}
+
+.heading .temp-degree {
+  position: relative;
+  left: 10px;
+  top: -35px;
+  font-weight: bolder;
+  font-size: 50px;
+  max-width: 30px;
+}
+.heading > .degrees {
+  position: relative;
+  left: 40px;
+  top: 0px;
+  display: flex;
+  font-weight: bolder;
+  font-size: 20px;
+  max-width: 30px;
+}
+
+.degrees a {
+  text-decoration: none;
+  padding: 0px 2px;
+  color: black;
+}
+
+.degrees .slice {
+  margin: 17px 5px 0;
+  font-size: 24px;
+  color: #519df4;
+}
+
+.heading > .main-data > .current_city {
+  margin: 15px 10px 15px 150px;
+  font-size: 40px;
+}
+
+.heading > .main-data > .current-time {
+  display: inline;
+  margin: 0 0 0 130px;
+  font-size: 20px;
+}
+
+.choose_city {
+  display: flex;
+  margin: 10px 0 10px 0px;
+  max-width: 700px;
+}
+
+.choose_city .temp-data {
+  margin: 30px 10px 0 40px;
+  text-align: left;
+}
+
+.temp-data p {
+  margin: 0;
+}
+
+.choose_city .search {
+  padding: 40px 0 20px 20px;
+}
+
+.choose_city input {
+  padding: 10px 10px;
+  border: 2px solid #519df4;
+  color: #519df4;
+  width: 170px;
+}
+
+input::placeholder {
+  color: #519df4;
+  font-size: 17px;
+}
+
+.choose_city .btn {
+  padding: 8px 10px;
+  margin: 0 5px;
+  color: white;
+  background-color: #519df4;
+  border: 2px solid #519df4;
+  border-radius: 50px;
+  transition: all 150ms ease-in-out;
+  font-size: 17px;
+}
+
+.btn:hover {
+  border: 2px solid #519df4;
+  color: #519df4;
+  background-color: white;
+}
+
+.btn-current {
+  background: goldenrod;
+  color: white;
+  padding: 8px 10px;
+  margin: 0;
+  border: 2px solid goldenrod;
+  border-radius: 50px;
+  transition: all 150ms ease-in-out;
+  font-size: 17px;
+}
+
+.btn-current:hover {
+  border: 2px solid goldenrod;
+  color: goldenrod;
+  background-color: white;
+}
+
+hr {
+  background-color: #519df4;
+  height: 2px;
+  border-radius: 50px;
+  width: 500px;
+}
+
+.weather {
+  padding: 0 0 20px;
+}
+
+.daygroup {
+  display: inline-block;
+  padding: 0px 12px;
+}
+
+.daygroup h5 {
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.daygroup p {
+  font-size: 20px;
+}
