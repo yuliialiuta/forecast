@@ -152,3 +152,8 @@ hr {
 .daygroup p {
   font-size: 20px;
 }
+
+.link {
+  text-align: center;
+  font-style: italic;
+}
