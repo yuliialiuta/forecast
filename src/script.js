@@ -48,6 +48,21 @@ function displayCurrentTemp(response) {
   tempDegree.innerHTML = `${temperature}`;
   let currentCity = document.querySelector("h1.current_city");
   currentCity.innerHTML = `${city}`;
+  let descriptionEl = document.querySelector(".description");
+  descriptionEl.innerHTML = response.data.weather[0].description;
+  //let precipitationEl = document.querySelector(".precipitation");
+  let humidityEl = document.querySelector(".humidity");
+  let windEl = document.querySelector(".wind");
+
+  //precipitationEl.innerHTML = response.data.weather.main.precipitation;
+  humidityEl.innerHTML = response.data.weather.main.humidity;
+  windEl.innerHTML = Math.round(response.data.weather.wind.speed);
+
+  let weatherIcon = document.querySelector(".image");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function displayCurrentPosition(position) {

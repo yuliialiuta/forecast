@@ -14,12 +14,18 @@ body {
   padding: 10px 10px 0;
   display: inline-flex;
   max-height: 100px;
+  max-width: 600px;
 }
 
 .heading > .image {
   padding: 15px 5px;
   font-size: 40px;
   margin: 0;
+}
+
+.heading .description {
+  margin: 0;
+  text-transform: capitalize;
 }
 
 .heading .temp-degree {

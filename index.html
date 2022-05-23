@@ -17,8 +17,11 @@
   <body>
     <div class="container">
       <section class="heading">
-        <p class="image">🌞</p>
-        <p class="temp-degree">21</p>
+        <div>
+          <img class="image" src="" alt="" />
+          <p class="description">Clear sky</p>
+        </div>
+        <p class="temp-degree"></p>
         <div class="degrees">
           <p class="celsius degree"><a class="celsiusD" href="#">°C</a></p>
           <span class="slice">|</span>
@@ -34,9 +37,9 @@
       </section>
       <section class="choose_city">
         <div class="temp-data">
-          <p>Precipitation: 0%</p>
-          <p>Humidity: 77%</p>
-          <p>Wind: 8 km/h</p>
+          <p>Precipitation: <span class="precipitation"></span>%</p>
+          <p>Humidity: <span class="humidity"></span>%</p>
+          <p>Wind: <span class="wind"></span>km/h</p>
         </div>
         <form class="search">
           <input
