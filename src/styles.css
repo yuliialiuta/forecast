@@ -14,32 +14,23 @@ body {
   padding: 10px 10px 0;
   display: inline-flex;
   max-height: 100px;
-  max-width: 600px;
+  max-width: 900px;
 }
 
-.heading > .image {
-  padding: 15px 5px;
-  font-size: 40px;
-  margin: 0;
-}
-
-.heading .description {
-  margin: 0;
-  text-transform: capitalize;
+.heading .weather-info {
+  display: flex;
+  margin: 10px 40px 0 0;
 }
 
 .heading .temp-degree {
   position: relative;
-  left: 10px;
   top: -35px;
   font-weight: bolder;
   font-size: 50px;
-  max-width: 30px;
+  margin: 50px 0 0;
 }
-.heading > .degrees {
-  position: relative;
-  left: 40px;
-  top: 0px;
+.heading .degrees {
+  margin: 0 0 0 10px;
   display: flex;
   font-weight: bolder;
   font-size: 20px;
@@ -58,15 +49,26 @@ body {
   color: #519df4;
 }
 
+.heading .main-data {
+  max-width: 300px;
+  margin: 0 10px 0 20px;
+  text-align: center;
+}
+
 .heading > .main-data > .current_city {
-  margin: 15px 10px 15px 150px;
+  margin: 15px 10px 5px;
   font-size: 40px;
 }
 
-.heading > .main-data > .current-time {
+.heading > .main-data > .date-data {
   display: inline;
-  margin: 0 0 0 130px;
-  font-size: 20px;
+  margin: 15px 10px 0px;
+  font-size: 17px;
+}
+
+.heading .description {
+  margin: 5px 10px 0px;
+  text-transform: capitalize;
 }
 
 .choose_city {
@@ -76,7 +78,7 @@ body {
 }
 
 .choose_city .temp-data {
-  margin: 30px 10px 0 40px;
+  margin: 40px 10px 0 70px;
   text-align: left;
 }
 
@@ -85,14 +87,15 @@ body {
 }
 
 .choose_city .search {
-  padding: 40px 0 20px 20px;
+  padding: 40px 0 20px;
+  margin-inline: auto;
 }
 
 .choose_city input {
   padding: 10px 10px;
   border: 2px solid #519df4;
   color: #519df4;
-  width: 170px;
+  width: 190px;
 }
 
 input::placeholder {
@@ -117,7 +120,7 @@ input::placeholder {
   background-color: white;
 }
 
-.btn-current {
+/* .btn-current {
   background: goldenrod;
   color: white;
   padding: 8px 10px;
@@ -132,7 +135,7 @@ input::placeholder {
   border: 2px solid goldenrod;
   color: goldenrod;
   background-color: white;
-}
+} */
 
 hr {
   background-color: #519df4;
@@ -162,4 +165,5 @@ hr {
 .link {
   text-align: center;
   font-style: italic;
+  font-weight: bolder;
 }

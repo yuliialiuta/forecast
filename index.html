@@ -17,29 +17,33 @@
   <body>
     <div class="container">
       <section class="heading">
-        <div>
-          <img class="image" src="" alt="" />
-          <p class="description">Clear sky</p>
+        <div class="weather-info">
+          <img
+            class="image"
+            src="http://openweathermap.org/img/wn/02n@2x.png"
+            alt=""
+          />
+          <p class="temp-degree">21</p>
+          <div class="degrees">
+            <p class="celsius degree"><a class="celsiusD" href="#">°C</a></p>
+            <span class="slice">|</span>
+            <p class="fahrenheight degree">
+              <a class="fahrenheightD" href="#">°F</a>
+            </p>
+          </div>
         </div>
-        <p class="temp-degree"></p>
-        <div class="degrees">
-          <p class="celsius degree"><a class="celsiusD" href="#">°C</a></p>
-          <span class="slice">|</span>
-          <p class="fahrenheight degree">
-            <a class="fahrenheightD" href="#">°F</a>
-          </p>
-        </div>
-
         <div class="main-data">
-          <h1 class="current_city">Lviv, Ukraine</h1>
-          <p class="current-time">Thursday, 14:30</p>
+          <h1 class="current_city">Lviv</h1>
+          <p class="date-data">
+            Last updated: <span class="date">Thursday, 14:30</span>
+          </p>
+          <p class="description">Clear sky</p>
         </div>
       </section>
       <section class="choose_city">
         <div class="temp-data">
-          <p>Precipitation: <span class="precipitation"></span>%</p>
-          <p>Humidity: <span class="humidity"></span>%</p>
-          <p>Wind: <span class="wind"></span>km/h</p>
+          <p>Humidity: <span class="humidity">40</span>%</p>
+          <p>Wind: <span class="wind">20</span>km/h</p>
         </div>
         <form class="search">
           <input
@@ -49,7 +53,7 @@
             placeholder="Enter a city"
           />
           <button type="button" class="btn btn-outline-primary">Search</button>
-          <button type="button" class="btn-current">Current</button>
+          <!-- <button type="button" class="btn-current">Current</button> -->
         </form>
       </section>
       <section class="weather">

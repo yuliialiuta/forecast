@@ -1,25 +1,3 @@
-function currentTime() {
-  let now = new Date();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[now.getDay()];
-
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-
-  return `${day}, ${hours}:${minutes}`;
-}
-
-let time = document.querySelector("p.current-time");
-time.innerHTML = currentTime();
-
 function showCity(event) {
   event.preventDefault();
 
@@ -41,28 +19,53 @@ search.addEventListener("submit", showCity);
 let searchBtn = document.querySelector(".search button");
 searchBtn.addEventListener("click", showCity);
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day}, ${hours}:${minutes}`;
+}
+
 function displayCurrentTemp(response) {
+  console.log(response);
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
+
   let tempDegree = document.querySelector("p.temp-degree");
-  tempDegree.innerHTML = `${temperature}`;
   let currentCity = document.querySelector("h1.current_city");
-  currentCity.innerHTML = `${city}`;
   let descriptionEl = document.querySelector(".description");
-  descriptionEl.innerHTML = response.data.weather[0].description;
-  //let precipitationEl = document.querySelector(".precipitation");
   let humidityEl = document.querySelector(".humidity");
   let windEl = document.querySelector(".wind");
-
-  //precipitationEl.innerHTML = response.data.weather.main.precipitation;
-  humidityEl.innerHTML = response.data.weather.main.humidity;
-  windEl.innerHTML = Math.round(response.data.weather.wind.speed);
-
   let weatherIcon = document.querySelector(".image");
+  let dateEl = document.querySelector(".date");
+
+  tempDegree.innerHTML = `${temperature}`;
+  currentCity.innerHTML = `${city}`;
+  descriptionEl.innerHTML = response.data.weather[0].description;
+  humidityEl.innerHTML = response.data.main.humidity;
+  windEl.innerHTML = Math.round(response.data.wind.speed);
   weatherIcon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
+  dateEl.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function displayCurrentPosition(position) {
@@ -75,8 +78,10 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(displayCurrentPosition);
 }
 
-let currentBtn = document.querySelector(".btn-current");
-currentBtn.addEventListener("click", getCurrentPosition);
+getCurrentPosition();
+
+// let currentBtn = document.querySelector(".btn-current");
+// currentBtn.addEventListener("click", getCurrentPosition);
 
 function convertToCelsius(temp) {
   return Math.round((5 / 9) * (temp - 32));
