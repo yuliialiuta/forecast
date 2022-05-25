@@ -43,7 +43,6 @@ function formatDate(timestamp) {
 }
 
 function displayCurrentTemp(response) {
-  console.log(response);
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
 
@@ -64,7 +63,7 @@ function displayCurrentTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  weatherIcon.setAttribute("alt", response.data.weather[0].description);
+  weatherIcon.setAttribute("alt", response.data.weather[0].descriptionremoved);
   dateEl.innerHTML = formatDate(response.data.dt * 1000);
 }
 
@@ -80,43 +79,8 @@ function getCurrentPosition() {
 
 getCurrentPosition();
 
-// let currentBtn = document.querySelector(".btn-current");
-// currentBtn.addEventListener("click", getCurrentPosition);
-
-function convertToCelsius(temp) {
-  return Math.round((5 / 9) * (temp - 32));
-}
-
-function convertToFahrenheight(temp) {
-  return Math.round(temp * 1.8 + 32);
-}
-
-let isCelsius = true;
-
 function celsiusHandler() {
-  if (isCelsius) {
-    return;
-  }
-
   let tempDegree = document.querySelector("p.temp-degree");
   const temp = parseInt(tempDegree.innerHTML, 10);
-  tempDegree.innerHTML = convertToCelsius(temp);
-  isCelsius = true;
+  tempDegree.innerHTML = temp;
 }
-
-function fahrenheightHandler() {
-  if (!isCelsius) {
-    return;
-  }
-
-  let tempDegree = document.querySelector("p.temp-degree");
-  const temp = parseInt(tempDegree.innerHTML, 10);
-  tempDegree.innerHTML = convertToFahrenheight(temp);
-  isCelsius = false;
-}
-
-let celsius = document.querySelector("a.celsiusD");
-celsius.addEventListener("click", celsiusHandler);
-
-let fahrenheit = document.querySelector("a.fahrenheightD");
-fahrenheit.addEventListener("click", fahrenheightHandler);

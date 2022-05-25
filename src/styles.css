@@ -29,24 +29,12 @@ body {
   font-size: 50px;
   margin: 50px 0 0;
 }
+
 .heading .degrees {
-  margin: 0 0 0 10px;
-  display: flex;
+  margin: 20px 0 0 10px;
   font-weight: bolder;
   font-size: 20px;
   max-width: 30px;
-}
-
-.degrees a {
-  text-decoration: none;
-  padding: 0px 2px;
-  color: black;
-}
-
-.degrees .slice {
-  margin: 17px 5px 0;
-  font-size: 24px;
-  color: #519df4;
 }
 
 .heading .main-data {
@@ -119,23 +107,6 @@ input::placeholder {
   color: #519df4;
   background-color: white;
 }
-
-/* .btn-current {
-  background: goldenrod;
-  color: white;
-  padding: 8px 10px;
-  margin: 0;
-  border: 2px solid goldenrod;
-  border-radius: 50px;
-  transition: all 150ms ease-in-out;
-  font-size: 17px;
-}
-
-.btn-current:hover {
-  border: 2px solid goldenrod;
-  color: goldenrod;
-  background-color: white;
-} */
 
 hr {
   background-color: #519df4;
