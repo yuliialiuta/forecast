@@ -124,13 +124,22 @@ hr {
   padding: 0px 12px;
 }
 
-.daygroup h5 {
-  font-size: 20px;
+.daygroup .day-of-week {
+  font-size: 17px;
   margin: 10px 0px;
+  font-weight: bolder;
 }
 
-.daygroup p {
-  font-size: 20px;
+.daygroup {
+  font-size: 15px;
+  padding: 7px 10px;
+  transition: all 150ms ease-in-out;
+  max-width: 60px;
+}
+
+.daygroup:hover {
+  background-color: #519df4;
+  color: white;
 }
 
 .link {
